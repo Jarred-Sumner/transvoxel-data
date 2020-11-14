@@ -1,12 +1,13 @@
 {
   "name": "transvoxel-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./transvoxel-cjs.js",
   "files": [
     "index.js",
     "transvoxel-cjs.js",
     "transvoxel-esm.js",
-    "transvoxel-iife.js"
+    "transvoxel-iife.js",
+    "types.d.ts"
   ],
   "license": "MIT",
   "types": "./types.d.ts",
