@@ -1,7 +1,7 @@
 {
   "name": "transvoxel-data",
-  "version": "1.0.1",
-  "main": "./transvoxel-cjs.js",
+  "version": "1.0.2",
+  "main": "transvoxel-cjs.js",
   "files": [
     "index.js",
     "transvoxel-cjs.js",
@@ -10,8 +10,8 @@
     "types.d.ts"
   ],
   "license": "MIT",
-  "types": "./types.d.ts",
-  "browser": "./transvoxel-esm.js",
+  "types": "types.d.ts",
+  "browser": "transvoxel-esm.js",
   "scripts": {
     "build-cjs": "esbuild Transvoxel.ts --format=cjs --outfile=./transvoxel-cjs.js",
     "build-esm": "esbuild Transvoxel.ts --format=esm --minify-whitespace --minify-syntax --outfile=./transvoxel-esm.js",
