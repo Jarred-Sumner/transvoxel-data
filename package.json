@@ -1,0 +1,27 @@
+{
+  "name": "transvoxel-data",
+  "version": "1.0.0",
+  "main": "./transvoxel-cjs.js",
+  "files": [
+    "index.js",
+    "transvoxel-cjs.js",
+    "transvoxel-esm.js",
+    "transvoxel-iife.js"
+  ],
+  "license": "MIT",
+  "types": "./types.d.ts",
+  "browser": "./transvoxel-esm.js",
+  "scripts": {
+    "build-cjs": "esbuild Transvoxel.ts --format=cjs --outfile=./transvoxel-cjs.js",
+    "build-esm": "esbuild Transvoxel.ts --format=esm --minify-whitespace --minify-syntax --outfile=./transvoxel-esm.js",
+    "build-iife": "esbuild Transvoxel.ts --format=cjs --outfile=./transvoxel-iife.js",
+    "types": "tsc --emitDeclarationOnly --declaration ./Transvoxel.ts && mv Transvoxel.d.ts ./types.d.ts",
+    "build": "yarn --silent build-cjs && yarn --silent build-esm && yarn --silent build-iife && yarn types",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "esbuild": "latest",
+    "jest": "^26.6.3"
+  }
+}
